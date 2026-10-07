@@ -1,0 +1,12 @@
+[
+  { "caso": "sin nome",                 "campo": "nome",          "body": { "email": "valido@test.com", "password": "123", "administrador": "true" },               "mensaje": "nome é obrigatório" },
+  { "caso": "sin email",                "campo": "email",         "body": { "nome": "QA", "password": "123", "administrador": "true" },                             "mensaje": "email é obrigatório" },
+  { "caso": "sin password",             "campo": "password",      "body": { "nome": "QA", "email": "valido@test.com", "administrador": "true" },                    "mensaje": "password é obrigatório" },
+  { "caso": "sin administrador",        "campo": "administrador", "body": { "nome": "QA", "email": "valido@test.com", "password": "123" },                          "mensaje": "administrador é obrigatório" },
+  { "caso": "nome vacío",               "campo": "nome",          "body": { "nome": "", "email": "valido@test.com", "password": "123", "administrador": "true" },   "mensaje": "nome não pode ficar em branco" },
+  { "caso": "email vacío",              "campo": "email",         "body": { "nome": "QA", "email": "", "password": "123", "administrador": "true" },                "mensaje": "email não pode ficar em branco" },
+  { "caso": "password vacío",           "campo": "password",      "body": { "nome": "QA", "email": "valido@test.com", "password": "", "administrador": "true" },    "mensaje": "password não pode ficar em branco" },
+  { "caso": "email con formato inválido","campo": "email",        "body": { "nome": "QA", "email": "correo-invalido", "password": "123", "administrador": "true" }, "mensaje": "email deve ser um email válido" },
+  { "caso": "administrador inválido",   "campo": "administrador", "body": { "nome": "QA", "email": "valido@test.com", "password": "123", "administrador": "si" },    "mensaje": "administrador deve ser 'true' ou 'false'" },
+  { "caso": "nome numérico",            "campo": "nome",          "body": { "nome": 123, "email": "valido@test.com", "password": "123", "administrador": "true" },  "mensaje": "nome deve ser uma string" }
+]
